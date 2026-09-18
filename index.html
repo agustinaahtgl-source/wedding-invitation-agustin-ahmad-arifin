@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1e1e1e">
+  <meta name="description" content="The Wedding of Agustina & Ahmad Arifin — 17 Juli 2027">
+  <title>The Wedding of Agustina & Ahmad Arifin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="opening-screen" id="openingScreen" aria-modal="true" role="dialog">
+    <div class="opening-backdrop"></div>
+    <div class="opening-card">
+      <span class="eyebrow">THE WEDDING OF</span>
+      <h1>Agustina <i>&amp;</i><br>Ahmad Arifin</h1>
+      <div class="ornament">✦</div>
+      <p class="recipient-label">Kepada Yth.</p>
+      <p class="recipient-name" id="recipientName">Tamu Undangan</p>
+      <p class="opening-copy">Merupakan suatu kehormatan bagi kami apabila Anda berkenan hadir dan menjadi bagian dari hari bahagia kami.</p>
+      <button class="primary-btn" id="openInvitation">Buka Undangan</button>
+      <p class="opening-date">17 • 07 • 2027</p>
+    </div>
+  </div>
+
+  <audio id="bgMusic" src="assets/music/wedding-music.mp3" loop preload="metadata"></audio>
+  <button class="music-toggle" id="musicToggle" type="button" aria-label="Putar musik" aria-pressed="false">♫</button>
+
+  <main id="siteContent" class="site-content is-locked">
+    <section class="section hero-panel reveal" id="home">
+      <div class="cloud-layer"></div>
+      <div class="floral-corner floral-top"></div>
+      <div class="hero-inner">
+        <span class="eyebrow">THE WEDDING OF</span>
+        <h2>Agustina <span>&amp;</span> Ahmad Arifin</h2>
+        <p class="script-title">A new chapter begins</p>
+        <img class="hero-photo" src="assets/cover/couple-01.jpg" alt="Agustina dan Ahmad Arifin" loading="eager">
+        <p class="hero-date">17 JULI 2027</p>
+        <div class="scroll-hint">SCROLL TO EXPLORE <span>↓</span></div>
+      </div>
+    </section>
+
+    <section class="section verse-panel reveal" id="verse">
+      <div class="panel-layer"></div>
+      <span class="eyebrow">A PRAYER FOR OUR JOURNEY</span>
+      <h2>بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</h2>
+      <div class="verse-arabic" dir="rtl">
+        رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ وَاجْعَلْنَا لِلْمُتَّقِينَ إِمَامًا
+      </div>
+      <p class="verse-ref">QS. Al-Furqan: 74</p>
+      <p class="verse-translation">“Ya Tuhan kami, anugerahkanlah kepada kami pasangan dan keturunan sebagai penyejuk hati, dan jadikanlah kami pemimpin bagi orang-orang yang bertakwa.”</p>
+    </section>
+
+    <section class="section couple-panel reveal" id="couple">
+      <div class="floral-corner floral-left"></div>
+      <span class="eyebrow">THE COUPLE</span>
+      <h2>Our forever begins here</h2>
+
+      <article class="profile bride-profile">
+        <img src="assets/bride/bride.jpg" alt="Agustina" loading="lazy">
+        <span class="profile-role">THE BRIDE</span>
+        <h3>Agustina, S.E</h3>
+        <p>Putri ke-2 dari<br><strong>Bapak Benny Samsudin (Alm) &amp; Ibu Hermida Hutagaol</strong></p>
+        <a class="ig-link" href="https://www.instagram.com/Auguusstyna" target="_blank" rel="noopener">@Auguusstyna</a>
+      </article>
+
+      <div class="couple-amp">&amp;</div>
+
+      <article class="profile groom-profile">
+        <img src="assets/groom/groom.jpg" alt="Ahmad Arifin" loading="lazy">
+        <span class="profile-role">THE GROOM</span>
+        <h3>Ahmad Arifin, S.I.Kom</h3>
+        <p>Putra ke-3 dari<br><strong>Bapak Mardiana &amp; Ibu Lasiyem</strong></p>
+        <a class="ig-link" href="https://www.instagram.com/ahmd.arfnn" target="_blank" rel="noopener">@ahmd.arfnn</a>
+      </article>
+    </section>
+
+    <section class="section countdown-panel reveal" id="countdown">
+      <div class="javanese-pattern"></div>
+      <span class="eyebrow">SAVE THE DATE</span>
+      <h2>17.07.2027</h2>
+      <div class="countdown-grid">
+        <div><strong id="days">000</strong><span>Hari</span></div>
+        <div><strong id="hours">00</strong><span>Jam</span></div>
+        <div><strong id="minutes">00</strong><span>Menit</span></div>
+        <div><strong id="seconds">00</strong><span>Detik</span></div>
+      </div>
+      <button class="secondary-btn" id="calendarBtn" type="button">♡ Simpan ke Kalender</button>
+    </section>
+
+    <section class="section day-panel reveal" id="day">
+      <span class="eyebrow">THE DAY</span>
+      <h2>Our Special Day</h2>
+      <div class="event-card">
+        <span class="event-label">AKAD NIKAH</span>
+        <strong>Sabtu, 17 Juli 2027</strong>
+        <span>Pukul 10.00 WIB</span>
+      </div>
+      <div class="divider-mark">&amp;</div>
+      <div class="event-card">
+        <span class="event-label">RESEPSI</span>
+        <strong>Sabtu, 17 Juli 2027</strong>
+        <span>Pukul 11.00 – 16.00 WIB</span>
+      </div>
+    </section>
+
+    <section class="section address-panel reveal" id="address">
+      <span class="eyebrow">THE ADDRESS</span>
+      <h2>Alamat</h2>
+      <div class="address-card">
+        <h3>Lapangan PB Kemang</h3>
+        <p>Gg. Sabar, Rangkapan Jaya, Kec. Pancoran Mas, Kota Depok, Jawa Barat 16435</p>
+        <a class="primary-btn small" href="https://maps.app.goo.gl/fbhnJiMfCUA7Hio5A" target="_blank" rel="noopener">Lihat di Google Maps</a>
+      </div>
+      <div class="parking-note">
+        <span class="note-icon">⌂</span>
+        <div>
+          <strong>Informasi Parkir</strong>
+          <p>Bagi tamu yang membawa mobil, area parkir dapat menggunakan area ruko di sekitar Gg. Sabar. Mohon mengikuti arahan dan ketentuan dari pemilik area parkir.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery-panel reveal" id="gallery">
+      <div class="betawi-accent">✿</div>
+      <span class="eyebrow">OUR GALLERY</span>
+      <h2>A collection of our favorite moments</h2>
+      <button class="gallery-feature" type="button" data-gallery-index="0">
+        <img id="galleryFeatureImage" src="assets/gallery/gallery-01.jpg" alt="Pre-wedding Agustina dan Ahmad Arifin" loading="lazy">
+        <span class="gallery-open">TAP TO VIEW</span>
+      </button>
+      <div class="gallery-thumbs" id="galleryThumbs"></div>
+    </section>
+
+    <section class="section story-panel reveal" id="story">
+      <div class="ondel ondel-left">◈</div>
+      <div class="ondel ondel-right">◈</div>
+      <span class="eyebrow">OUR STORY</span>
+      <h2>Love, growing in time</h2>
+      <div class="story-list">
+        <article><span>THE BEGINNING</span><p>Segalanya berawal sekitar tahun 2017, ketika kami pertama kali dipertemukan. Dari sebuah pertemuan sederhana, kami kemudian kembali dipertemukan saat bekerja di tempat yang sama, hingga perlahan menjadi semakin dekat.</p></article>
+        <article><span>GROWING TOGETHER</span><p>Tahun 2021 menjadi awal perjalanan kami sebagai pasangan. Seiring waktu, kami belajar untuk saling memahami, tumbuh bersama, dan melewati berbagai cerita dalam perjalanan kami.</p></article>
+        <article><span>A MEANINGFUL CHOICE</span><p>Memasuki tahun kedua bersama, keyakinan untuk melangkah ke arah yang lebih serius semakin kuat. Hingga akhirnya, dengan penuh keyakinan dan doa, kami memutuskan untuk melanjutkan perjalanan ini dalam sebuah ikatan pernikahan.</p></article>
+        <article><span>AND HERE WE ARE</span><p>Kini, kami siap memulai babak baru—membangun kehidupan bersama, dalam cinta, doa, dan ridha-Nya.</p></article>
+      </div>
+    </section>
+
+    <section class="section rsvp-panel reveal" id="rsvp">
+      <span class="eyebrow">KINDLY RESPOND</span>
+      <h2>Kehadiran Anda</h2>
+      <p>Merupakan suatu kehormatan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.</p>
+      <form id="rsvpForm">
+        <label>Nama Lengkap<input id="guestName" name="name" required autocomplete="name" placeholder="Nama Anda"></label>
+        <fieldset><legend>Konfirmasi Kehadiran</legend><div class="attendance"><label><input type="radio" name="attendance" value="Hadir" required><span>Hadir</span></label><label><input type="radio" name="attendance" value="Tidak Hadir"><span>Tidak Hadir</span></label></div></fieldset>
+        <label>Ucapan &amp; Doa<textarea id="guestMessage" name="message" rows="4" placeholder="Tuliskan ucapan dan doa..."></textarea></label>
+        <button class="primary-btn" type="submit">Kirim</button>
+        <p class="form-status" id="formStatus" role="status"></p>
+      </form>
+    </section>
+
+    <section class="section wishes-panel reveal" id="wishes">
+      <span class="eyebrow">WISHES</span>
+      <h2>Ucapan &amp; Doa</h2>
+      <div id="wishesList" class="wishes-list"><p class="muted">Memuat ucapan...</p></div>
+    </section>
+
+    <section class="section gifts-panel reveal" id="gifts">
+      <span class="eyebrow">WANNA GIVE US SOME GIFTS?</span>
+      <h2>Your thought means so much</h2>
+      <p>Doa restu dan kehadiran Anda merupakan hadiah terindah bagi kami. Namun, jika Anda ingin memberikan hadiah, dapat melalui:</p>
+      <div class="bank-card"><span class="bank-name">BCA</span><strong>7401881305</strong><span>a.n. Agustina</span><button type="button" class="copy-btn" data-copy="7401881305">Copy</button></div>
+      <div class="bank-card"><span class="bank-name">BNI</span><strong>1620068660</strong><span>a.n. Ahmad Arifin</span><button type="button" class="copy-btn" data-copy="1620068660">Copy</button></div>
+    </section>
+
+    <section class="section delivery-panel reveal" id="delivery">
+      <span class="eyebrow">GIFT DELIVERY</span>
+      <h2>Jika ingin mengirimkan hadiah fisik</h2>
+      <p>Hadiah dapat dikirimkan ke salah satu alamat berikut:</p>
+      <div class="delivery-card"><span>UNTUK AGUSTINA</span><p>Jl. Pitara Raya Gg. Swadaya 2 RT 04 RW 19 No. 83, Kecamatan Pancoran Mas, Kelurahan Rangkapan Jaya, Kota Depok, Jawa Barat 16435</p></div>
+      <div class="or-mark">atau</div>
+      <div class="delivery-card"><span>UNTUK AHMAD ARIFIN</span><p>Gg. Sabar RT 04 RW 19 (WARUNG), Kecamatan Pancoran Mas, Kelurahan Rangkapan Jaya, Kota Depok, Jawa Barat 16435</p></div>
+    </section>
+
+    <section class="section closing-panel reveal" id="closing">
+      <img src="assets/cover/couple-01.jpg" alt="Agustina dan Ahmad Arifin" loading="lazy">
+      <div class="medan-accent">✦</div>
+      <span class="eyebrow">TERIMA KASIH</span>
+      <h2>Atas doa, restu, dan kehadiran Anda pada hari yang istimewa ini.</h2>
+      <p>Semoga Allah membalas kebaikan Bapak/Ibu/Saudara/i semua.</p>
+      <p class="script-title">Agustina &amp; Ahmad Arifin</p>
+      <span>17 • 07 • 2027</span>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Tutup">×</button>
+    <button class="lightbox-nav prev" id="galleryPrev" type="button" aria-label="Foto sebelumnya">‹</button>
+    <figure><img id="lightboxImage" src="" alt=""><figcaption><span id="galleryCounter">01 / 08</span></figcaption></figure>
+    <button class="lightbox-nav next" id="galleryNext" type="button" aria-label="Foto berikutnya">›</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
