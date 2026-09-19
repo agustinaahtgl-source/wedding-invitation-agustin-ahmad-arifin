@@ -1,0 +1,565 @@
+
+/* =========================================================
+   AGUSTINA & AHMAD — LAYERED WEDDING VISUAL ENHANCEMENT
+   Load AFTER style.css
+   Modern Javanese × Betawi × subtle Medan
+   ========================================================= */
+
+:root{
+  --ink:#17191c;
+  --ink-soft:#29313a;
+  --dusty:#8195ad;
+  --dusty-dark:#53697f;
+  --silver:#c9d0d8;
+  --smoke:#f3f4f3;
+  --paper:#fbfaf7;
+  --line:rgba(82,105,127,.28);
+  --gold-soft:rgba(196,174,132,.52);
+}
+
+/* ---------- GLOBAL DEPTH ---------- */
+body{
+  background:#15191d;
+}
+
+.site-content{
+  background:
+    radial-gradient(circle at 15% 10%, rgba(255,255,255,.05), transparent 28%),
+    #15191d;
+}
+
+.section{
+  isolation:isolate;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.5),
+    inset 0 -1px 0 rgba(20,24,28,.08);
+}
+
+/* layered paper/frame */
+.section::before{
+  content:"";
+  position:absolute;
+  inset:28px;
+  border:1px solid rgba(82,105,127,.13);
+  border-radius:2px;
+  pointer-events:none;
+  z-index:0;
+}
+
+.section::after{
+  inset:13px;
+  border:1px solid rgba(23,25,28,.13);
+  z-index:0;
+}
+
+/* content stays above decorative layers */
+.section > *{
+  position:relative;
+  z-index:2;
+}
+
+/* ---------- SMALL DECORATIVE CORNERS ---------- */
+.section::marker{display:none}
+
+.hero-panel::before,
+.verse-panel::before,
+.couple-panel::before,
+.countdown-panel::before,
+.day-panel::before,
+.address-panel::before,
+.gallery-panel::before,
+.story-panel::before,
+.rsvp-panel::before,
+.wishes-panel::before,
+.gifts-panel::before,
+.delivery-panel::before,
+.closing-panel::before{
+  pointer-events:none;
+}
+
+/* geometric corner ornaments */
+.section:not(.hero-panel):not(.closing-panel)::marker{display:none}
+
+.couple-panel,
+.day-panel,
+.address-panel,
+.rsvp-panel,
+.wishes-panel,
+.delivery-panel{
+  background:
+    radial-gradient(circle at 10% 12%, rgba(129,149,173,.10) 0 1px, transparent 2px),
+    radial-gradient(circle at 90% 85%, rgba(129,149,173,.09) 0 1px, transparent 2px),
+    linear-gradient(135deg, rgba(255,255,255,.8), transparent 38%),
+    var(--paper);
+}
+
+/* ---------- OPENING SCREEN ---------- */
+.opening-screen{
+  background:#12171b;
+}
+
+.opening-backdrop{
+  background:
+    radial-gradient(circle at 18% 18%, rgba(129,149,173,.42), transparent 22%),
+    radial-gradient(circle at 83% 78%, rgba(201,208,216,.18), transparent 24%),
+    linear-gradient(125deg,#0d1013 0%,#263746 48%,#121619 100%);
+}
+
+.opening-backdrop::before,
+.opening-backdrop::after{
+  content:"";
+  position:absolute;
+  border:1px solid rgba(201,208,216,.20);
+  transform:rotate(45deg);
+}
+
+.opening-backdrop::before{
+  width:220px;height:220px;
+  left:-110px;top:18%;
+}
+
+.opening-backdrop::after{
+  width:300px;height:300px;
+  right:-160px;bottom:5%;
+}
+
+.opening-card{
+  background:
+    linear-gradient(rgba(255,255,255,.96),rgba(246,247,246,.96)),
+    repeating-linear-gradient(0deg,transparent 0 3px,rgba(23,25,28,.025) 4px);
+  box-shadow:
+    0 18px 50px rgba(0,0,0,.28),
+    14px 14px 0 rgba(129,149,173,.20),
+    -10px -10px 0 rgba(255,255,255,.10);
+}
+
+.opening-card::before,
+.opening-card::after{
+  width:92px;height:92px;
+}
+
+.opening-card .ornament{
+  font-size:18px;
+}
+
+/* ---------- HERO: STRONG LAYERED PHOTO ---------- */
+.hero-panel{
+  background:#151b20;
+}
+
+.hero-panel .cloud-layer{
+  background:
+    radial-gradient(ellipse at 20% 18%, rgba(129,149,173,.50), transparent 23%),
+    radial-gradient(ellipse at 82% 28%, rgba(255,255,255,.13), transparent 22%),
+    radial-gradient(ellipse at 55% 90%, rgba(129,149,173,.22), transparent 28%),
+    linear-gradient(150deg,#0d1114,#314456 56%,#151b20);
+}
+
+.hero-panel .cloud-layer::before,
+.hero-panel .cloud-layer::after{
+  content:"";
+  position:absolute;
+  border:1px solid rgba(255,255,255,.16);
+  transform:rotate(45deg);
+}
+
+.hero-panel .cloud-layer::before{
+  width:260px;height:260px;
+  left:-110px;top:12%;
+}
+
+.hero-panel .cloud-layer::after{
+  width:330px;height:330px;
+  right:-170px;bottom:6%;
+}
+
+.hero-inner{
+  padding:34px 22px 30px;
+}
+
+.hero-inner::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:
+    0 0 0 10px rgba(255,255,255,.025),
+    0 0 0 20px rgba(129,149,173,.07);
+  pointer-events:none;
+}
+
+.hero-photo{
+  position:relative;
+  box-shadow:
+    10px 10px 0 rgba(129,149,173,.38),
+    -8px -8px 0 rgba(255,255,255,.07),
+    0 25px 55px rgba(0,0,0,.34);
+}
+
+.hero-photo::after{
+  content:"";
+}
+
+/* ---------- VERSE: PAPER CARD IN LAYER ---------- */
+.verse-panel{
+  background:
+    linear-gradient(135deg,#e7edf2,#fafaf8 50%,#e5ebf0);
+}
+
+.verse-panel .panel-layer{
+  position:absolute;
+  width:min(760px,82vw);
+  height:72%;
+  background:rgba(255,255,255,.55);
+  border:1px solid rgba(82,105,127,.20);
+  box-shadow:
+    12px 12px 0 rgba(129,149,173,.13),
+    -12px -12px 0 rgba(255,255,255,.72);
+  transform:rotate(-1.2deg);
+  z-index:0;
+}
+
+.verse-panel .panel-layer::before,
+.verse-panel .panel-layer::after{
+  content:"";
+  position:absolute;
+  inset:18px;
+  border:1px solid rgba(196,174,132,.28);
+}
+
+.verse-panel .panel-layer::after{
+  inset:28px;
+  border-color:rgba(82,105,127,.10);
+}
+
+.verse-arabic{
+  position:relative;
+  padding:22px 28px;
+  background:rgba(255,255,255,.30);
+  border-top:1px solid rgba(82,105,127,.18);
+  border-bottom:1px solid rgba(82,105,127,.18);
+}
+
+/* ---------- COUPLE: DOUBLE PHOTO FRAMES ---------- */
+.couple-panel{
+  background:
+    radial-gradient(circle at 85% 15%,rgba(129,149,173,.12),transparent 24%),
+    var(--paper);
+}
+
+.profile{
+  position:relative;
+  padding:12px 14px 20px;
+}
+
+.profile::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border:1px solid rgba(82,105,127,.20);
+  transform:rotate(-1.2deg);
+  background:rgba(255,255,255,.36);
+  z-index:-1;
+  box-shadow:8px 8px 0 rgba(129,149,173,.10);
+}
+
+.groom-profile::before{
+  transform:rotate(1.2deg);
+}
+
+.profile img{
+  box-shadow:
+    7px 7px 0 rgba(129,149,173,.24),
+    -5px -5px 0 rgba(255,255,255,.8);
+}
+
+.couple-amp{
+  position:relative;
+  text-shadow:3px 3px 0 rgba(129,149,173,.18);
+}
+
+/* ---------- COUNTDOWN: DEEP PANEL ---------- */
+.countdown-panel{
+  background:
+    radial-gradient(circle at 15% 15%,rgba(129,149,173,.22),transparent 24%),
+    linear-gradient(135deg,#1a252e,#304457 52%,#172027);
+}
+
+.countdown-panel::before{
+  border-color:rgba(255,255,255,.18);
+  box-shadow:
+    0 0 0 9px rgba(255,255,255,.025),
+    0 0 0 10px rgba(255,255,255,.08);
+}
+
+.countdown-panel .javanese-pattern{
+  position:absolute;
+  inset:0;
+  opacity:.22;
+  background:
+    repeating-linear-gradient(45deg,transparent 0 22px,rgba(255,255,255,.05) 23px 24px),
+    repeating-linear-gradient(-45deg,transparent 0 22px,rgba(196,174,132,.04) 23px 24px);
+  mask-image:linear-gradient(to bottom,transparent,#000 18%,#000 82%,transparent);
+}
+
+.countdown-grid div{
+  background:rgba(255,255,255,.055);
+  backdrop-filter:blur(4px);
+  box-shadow:
+    inset 0 1px rgba(255,255,255,.14),
+    5px 5px 0 rgba(0,0,0,.10);
+}
+
+/* ---------- DAY / ADDRESS CARDS ---------- */
+.event-card,
+.address-card,
+.parking-note,
+.delivery-card,
+.bank-card{
+  box-shadow:
+    8px 8px 0 rgba(129,149,173,.13),
+    0 12px 28px rgba(30,35,40,.05);
+}
+
+.event-card{
+  background:rgba(255,255,255,.58);
+  position:relative;
+}
+
+.event-card::before{
+  content:"";
+  position:absolute;
+  inset:7px;
+  border:1px solid rgba(196,174,132,.20);
+  pointer-events:none;
+}
+
+.address-card{
+  position:relative;
+}
+
+.address-card::before,
+.delivery-card::before{
+  content:"";
+  position:absolute;
+  inset:9px;
+  border:1px solid rgba(82,105,127,.10);
+  pointer-events:none;
+}
+
+/* ---------- GALLERY: EDITORIAL FRAME ---------- */
+.gallery-panel{
+  background:
+    radial-gradient(circle at 12% 18%,rgba(129,149,173,.25),transparent 22%),
+    linear-gradient(135deg,#101417,#253645 52%,#111518);
+}
+
+.gallery-panel .betawi-accent{
+  position:absolute;
+  top:8%;
+  right:8%;
+  width:62px;
+  height:62px;
+  display:grid;
+  place-items:center;
+  border:1px solid rgba(255,255,255,.22);
+  border-radius:50%;
+  color:#c9d0d8;
+  opacity:.65;
+  box-shadow:0 0 0 8px rgba(255,255,255,.025);
+}
+
+.gallery-feature{
+  filter:drop-shadow(12px 12px 0 rgba(129,149,173,.22));
+}
+
+.gallery-feature::before{
+  content:"";
+  position:absolute;
+  inset:-10px;
+  border:1px solid rgba(255,255,255,.18);
+  transform:rotate(1deg);
+}
+
+.gallery-feature img{
+  box-shadow:
+    0 0 0 7px rgba(255,255,255,.035),
+    0 25px 50px rgba(0,0,0,.30);
+}
+
+/* ---------- LOVE STORY: BETAWI LAYER ---------- */
+.story-panel{
+  background:
+    radial-gradient(circle at 8% 12%,rgba(129,149,173,.14),transparent 20%),
+    radial-gradient(circle at 92% 88%,rgba(196,174,132,.10),transparent 20%),
+    #e9edf1;
+}
+
+.story-panel::before{
+  border-color:rgba(82,105,127,.18);
+}
+
+.story-list article{
+  position:relative;
+  background:rgba(255,255,255,.62);
+  box-shadow:6px 6px 0 rgba(129,149,173,.10);
+}
+
+.story-list article::after{
+  content:"";
+  position:absolute;
+  width:26px;height:26px;
+  top:14px;right:14px;
+  border:1px solid rgba(82,105,127,.18);
+  transform:rotate(45deg);
+}
+
+.ondel{
+  opacity:.22;
+  filter:drop-shadow(4px 4px 0 rgba(82,105,127,.12));
+}
+
+/* ---------- RSVP / WISHES ---------- */
+.rsvp-panel{
+  background:
+    linear-gradient(135deg,rgba(255,255,255,.8),transparent 50%),
+    #f3f4f3;
+}
+
+.rsvp-panel form{
+  position:relative;
+  padding:26px;
+  background:rgba(255,255,255,.62);
+  border:1px solid rgba(82,105,127,.16);
+  box-shadow:10px 10px 0 rgba(129,149,173,.10);
+}
+
+.rsvp-panel input,
+.rsvp-panel textarea,
+.attendance span{
+  border-color:rgba(82,105,127,.24);
+  background:rgba(255,255,255,.72);
+}
+
+.wishes-panel{
+  background:
+    radial-gradient(circle at 80% 12%,rgba(129,149,173,.12),transparent 25%),
+    #eef1f4;
+}
+
+.wish-card{
+  box-shadow:6px 6px 0 rgba(129,149,173,.10);
+}
+
+/* ---------- GIFTS / DELIVERY ---------- */
+.gifts-panel{
+  background:
+    radial-gradient(circle at 85% 15%,rgba(129,149,173,.22),transparent 24%),
+    linear-gradient(145deg,#19242d,#304457);
+}
+
+.bank-card{
+  background:rgba(255,255,255,.96);
+  box-shadow:
+    8px 8px 0 rgba(129,149,173,.24),
+    0 15px 35px rgba(0,0,0,.12);
+}
+
+.delivery-panel{
+  background:
+    linear-gradient(135deg,#faf9f6,#edf1f4);
+}
+
+/* ---------- CLOSING: DEEP LAYERED FINISH ---------- */
+.closing-panel{
+  background:#111519;
+}
+
+.closing-panel::before{
+  border-color:rgba(255,255,255,.18);
+  box-shadow:
+    0 0 0 9px rgba(255,255,255,.025),
+    0 0 0 10px rgba(255,255,255,.08);
+}
+
+.closing-panel img{
+  opacity:.31;
+  filter:grayscale(.18) contrast(1.04);
+}
+
+.closing-panel::after{
+  background:
+    linear-gradient(to bottom,rgba(10,13,16,.25),rgba(10,13,16,.62)),
+    radial-gradient(circle at 50% 45%,transparent 0 24%,rgba(10,13,16,.25) 65%);
+  border:0;
+}
+
+.medan-accent{
+  text-shadow:0 0 22px rgba(201,208,216,.42);
+}
+
+/* ---------- REVEAL: MORE LAYERED MOTION ---------- */
+.reveal{
+  opacity:0;
+  transform:translateY(34px) scale(.985);
+  transition:
+    opacity .85s ease,
+    transform .85s cubic-bezier(.2,.7,.2,1);
+}
+
+.reveal.visible{
+  opacity:1;
+  transform:none;
+}
+
+/* ---------- MOBILE ---------- */
+@media(max-width:759px){
+  .section::before{inset:23px}
+  .section::after{inset:11px}
+
+  .hero-inner{
+    padding:28px 18px;
+  }
+
+  .hero-inner::before{
+    inset:4px;
+    box-shadow:
+      0 0 0 7px rgba(255,255,255,.025),
+      0 0 0 14px rgba(129,149,173,.06);
+  }
+
+  .hero-photo{
+    width:min(76vw,330px);
+    height:min(96vw,430px);
+  }
+
+  .verse-panel .panel-layer{
+    height:68%;
+  }
+
+  .profile{
+    width:min(350px,92vw);
+  }
+
+  .story-list article{
+    padding-left:27px;
+  }
+
+  .ondel{
+    font-size:90px;
+  }
+
+  .rsvp-panel form{
+    padding:20px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  .reveal{
+    transition:none;
+    transform:none;
+  }
+  .music-toggle.playing{
+    animation:none;
+  }
+}
